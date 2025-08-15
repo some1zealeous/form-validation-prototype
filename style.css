@@ -221,7 +221,7 @@ body {
 
 .form-control:focus {
     outline: none;
-    /* color: var(--spiderman-white); */
+    color: var(--spiderman-white);
     border-color: var(--spiderman-red);
     background: rgba(30, 58, 138, 0.3);
     box-shadow: 0 0 0 2px rgba(220, 20, 60, 0.3);
