@@ -1,0 +1,355 @@
+:root {
+    --spiderman-red: #DC143C;
+    --spiderman-blue: #1E3A8A;
+    --spiderman-dark-blue: #0F1B3C;
+    --spiderman-black: #000000;
+    --spiderman-white: #FFFFFF;
+    --spiderman-light-red: #FF6B6B;
+    --spiderman-gray: #2D3748;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.registration-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+/* Left Panel - Spider-Man themed */
+.left-panel {
+    flex: 1;
+    background: linear-gradient(135deg, var(--spiderman-red) 0%, var(--spiderman-light-red) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.web-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: 
+        radial-gradient(circle at 20% 20%, transparent 20px, var(--spiderman-black) 21px, var(--spiderman-black) 22px, transparent 23px),
+        radial-gradient(circle at 80% 80%, transparent 20px, var(--spiderman-black) 21px, var(--spiderman-black) 22px, transparent 23px),
+        linear-gradient(45deg, transparent 48%, var(--spiderman-black) 49%, var(--spiderman-black) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, var(--spiderman-black) 49%, var(--spiderman-black) 51%, transparent 52%);
+    background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+
+.decorative-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--spiderman-blue);
+    top: -50px;
+    left: -50px;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    background: var(--spiderman-white);
+    top: 60%;
+    right: -30px;
+    opacity: 0.2;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    background: var(--spiderman-dark-blue);
+    top: 30%;
+    left: 60%;
+}
+
+.shape-4 {
+    width: 250px;
+    height: 250px;
+    background: var(--spiderman-black);
+    bottom: -80px;
+    left: 40%;
+    opacity: 0.2;
+}
+
+.logo-container {
+    position: relative;
+    z-index: 10;
+    width: 380px;
+    height: 340px;
+    background: var(--spiderman-blue);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    border: 3px solid var(--spiderman-red);
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
+}
+
+.logo-text {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: var(--spiderman-white);
+}
+
+.logo-main {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--spiderman-white);
+}
+
+.logo-sub {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--spiderman-red);
+}
+
+/* Right Panel - Dark Spider-Man themed */
+.right-panel {
+    flex: 1;
+    background: linear-gradient(180deg, var(--spiderman-dark-blue) 0%, var(--spiderman-black) 100%);
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.right-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 10% 10%, transparent 30px, rgba(220, 20, 60, 0.05) 31px, rgba(220, 20, 60, 0.05) 32px, transparent 33px),
+        radial-gradient(circle at 90% 90%, transparent 30px, rgba(220, 20, 60, 0.05) 31px, rgba(220, 20, 60, 0.05) 32px, transparent 33px);
+    background-size: 200px 200px;
+    pointer-events: none;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    color: var(--spiderman-white);
+    text-shadow: 2px 2px 4px rgba(220, 20, 60, 0.3);
+}
+
+.form-subtitle {
+    font-size: 14px;
+    color: var(--spiderman-red);
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: var(--spiderman-white);
+    text-transform: uppercase;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(30, 58, 138, 0.2);
+    border: 1px solid rgba(220, 20, 60, 0.3);
+    border-radius: 6px;
+    color: var(--spiderman-white);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    height: 45px;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus {
+    outline: none;
+    /* color: var(--spiderman-white); */
+    border-color: var(--spiderman-red);
+    background: rgba(30, 58, 138, 0.3);
+    box-shadow: 0 0 0 2px rgba(220, 20, 60, 0.3);
+}
+
+.form-control.is-invalid {
+    border-color: var(--spiderman-light-red);
+    background: rgba(255, 107, 107, 0.1);
+}
+
+.form-control.is-valid {
+    border-color: var(--spiderman-red);
+    background: rgba(220, 20, 60, 0.1);
+}
+
+.error-message {
+    display: none;
+    color: var(--spiderman-light-red);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    font-size: 11px;
+    line-height: 1.3;
+    position: relative;
+    z-index: 2;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 2px;
+    accent-color: var(--spiderman-red);
+}
+
+.checkbox-container label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, var(--spiderman-red), var(--spiderman-light-red));
+    border: none;
+    border-radius: 6px;
+    color: var(--spiderman-white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    height: 50px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, var(--spiderman-light-red), var(--spiderman-red));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(220, 20, 60, 0.4);
+}
+
+.login-link {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    z-index: 2;
+}
+
+.login-link a {
+    color: var(--spiderman-red);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    color: var(--spiderman-light-red);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .left-panel {
+        height: 200px;
+        flex: none;
+    }
+
+    .logo-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo-main {
+        font-size: 20px;
+    }
+
+    .right-panel {
+        padding: 40px 30px;
+        flex: 1;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .right-panel {
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
