@@ -6,7 +6,8 @@ The project includes custom form validation logic, themed UI elements, and mobil
 ---
 
 ## 📸 Preview
-<img src="assets/spidey.jpg" alt="Preview" width="150" height="180">
+<img src="assets/spidey_passport.jpg" alt="Preview" style="object-fit: cover; object-position: bottom; width:150px; height:180px;">
+
 
 
 ---
